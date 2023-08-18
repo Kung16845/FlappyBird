@@ -18,7 +18,7 @@ public class Hp : MonoBehaviour
     {
         
     }
-    public void TakeDamge(float damge)
+    public void TakeDamage(float damge)
     {
         currenthp -= damge;
         Debug.Log("Take Damege");

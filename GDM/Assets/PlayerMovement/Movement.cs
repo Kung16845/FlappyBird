@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse0))
             {
-                Debug.Log("jump");
+                //Debug.Log("jump");
                 myRigidbody2D.velocity = new Vector2(0, 0);
                 myRigidbody2D.AddForce(jumpForce * Vector2.up);
                 animator.SetTrigger("Jump");
