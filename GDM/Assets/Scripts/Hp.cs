@@ -20,6 +20,7 @@ public class Hp : MonoBehaviour
     }
     public void TakeDamage(float damge)
     {
+        if (currenthp <= 0) { return; }
         currenthp -= damge;
         Debug.Log("Take Damege");
         if(currenthp <= 0)

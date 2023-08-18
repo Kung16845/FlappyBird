@@ -3,25 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Gameloop : MonoBehaviour
 {
-    public Action OnPressed;
     public GameObject Player;
 
-    // Start is called before the first frame update
     void Start()
     {
         PauseGame();
-        OnPressed += ResumeGame;
         endMenu.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //OnPressed?.Invoke();
-    }
 
     void PauseGame()
     {
@@ -37,6 +30,8 @@ public class Gameloop : MonoBehaviour
     //---------------------------------------------------UI ZONE
     public GameObject startButton;
     public GameObject endMenu;
+    public TextMeshProUGUI hp_text;
+    public Hp life_point;
     public void StartGame()
     {
         ResumeGame();
@@ -50,5 +45,9 @@ public class Gameloop : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(0);
+    }
+    private void Update()
+    {
+        hp_text.SetText("Current HP: " +life_point.currenthp.ToString());
     }
 }
