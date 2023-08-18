@@ -7,13 +7,14 @@ using UnityEngine.SceneManagement;
 public class Gameloop : MonoBehaviour
 {
     public Action OnPressed;
+    private GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
+        GameObject Player = findPlayer();
         PauseGame();
         OnPressed += ResumeGame;
-
     }
 
     // Update is called once per frame
@@ -24,13 +25,11 @@ public class Gameloop : MonoBehaviour
     void PauseGame()
     {
         Time.timeScale = 0;
-        GameObject Player = findPlayer();
         Player.GetComponent<Rigidbody2D>().gravityScale = 0;
     }
-    void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1;
-        GameObject Player = findPlayer();
         Player.GetComponent<Rigidbody2D>().gravityScale = 1;
     }
     void RestartGame()
