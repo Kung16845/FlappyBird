@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ public class Player_collider : MonoBehaviour
     {
         if (collision.gameObject.tag == "Floor")
         {
-            gameloop.EndGame();
+            gameloop.RestartGame();                             //อยากให้มี Menu บอกว่า U DEAD ใช้ gameloop.EndGame()
         }
     }
 }
