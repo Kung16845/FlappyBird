@@ -3,25 +3,25 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject pillowPrefab; // Prefab ของเสา
+    public GameObject pillarPrefab; // Prefab ของเสา
     public float gapSize = 3.0f; // ระยะห่างช่องว่างของเสา
     public float spawnInterval = 2.0f; // เวลาในการสปอนเสา
     public float destroyDistance = 10.0f; // ระยะในการทำลายเสา
 
     private void Start()
     {
-        StartCoroutine(SpawnPillows());
+        StartCoroutine(SpawnPillars());
     }
 
-    private IEnumerator SpawnPillows()
+    private IEnumerator SpawnPillars()
     {
         while (true)
         {
             float randomY = Random.Range(-3f, 3.5f);//จะต๋ำและสูงสุดที่เสาจะสปอนได้
-            Vector3 bottomPillowPosition = transform.position + new Vector3(0, -gapSize + randomY, 0);
-            Instantiate(pillowPrefab, bottomPillowPosition, Quaternion.identity);
-            GameObject topPillow = Instantiate(pillowPrefab, transform.position + new Vector3(0, gapSize + randomY, 0), Quaternion.identity);
-            topPillow.transform.localScale = new Vector3(1f, -1f, 1f);
+            Vector3 bottomPillarPosition = transform.position + new Vector3(0, -gapSize + randomY, 0);
+            Instantiate(pillarPrefab, bottomPillarPosition, Quaternion.identity);
+            GameObject topPillar = Instantiate(pillarPrefab, transform.position + new Vector3(0, gapSize + randomY, 0), Quaternion.identity);
+            topPillar.transform.localScale = new Vector3(1f, -1f, 1f);
             yield return new WaitForSeconds(spawnInterval);
         }
     }
