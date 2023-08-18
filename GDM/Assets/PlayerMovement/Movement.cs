@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour
         animator.SetBool("idle", true);
         if (!isDead)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Mouse0))
             {
                 Debug.Log("jump");
                 myRigidbody2D.velocity = new Vector2(0, 0);
