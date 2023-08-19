@@ -266,6 +266,9 @@ MonoBehaviour:
   hp: 3
   currenthp: 0
   moveMent: {fileID: 175193492}
+  spriteRenderer: {fileID: 0}
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  immunityDuration: 2
 --- !u!95 &175193491
 Animator:
   serializedVersion: 5
@@ -301,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidbody2D: {fileID: 175193494}
   animator: {fileID: 175193491}
-  jumpForce: 250
+  jumpForce: 200
   isDead: 0
 --- !u!61 &175193493
 BoxCollider2D:
@@ -346,7 +349,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.18, y: 0.67}
+  m_Size: {x: 1.1800001, y: 0.67}
   m_EdgeRadius: 0
 --- !u!50 &175193494
 Rigidbody2D:
@@ -363,7 +366,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1908,7 +1911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pillarPrefab: {fileID: 6160962351394351637, guid: a2c807c053decf147869284fd946a0df, type: 3}
   gapSize: 7
-  spawnInterval: 1
+  spawnInterval: 1.5
   destroyDistance: 22
 --- !u!4 &2108732725
 Transform:
