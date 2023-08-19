@@ -8,6 +8,7 @@ using TMPro;
 public class Gameloop : MonoBehaviour
 {
     public GameObject Player;
+    public bool GameIsRunning =false;
 
     void Start()
     {
@@ -20,11 +21,13 @@ public class Gameloop : MonoBehaviour
     {
         Time.timeScale = 0;
         Player.GetComponent<Rigidbody2D>().gravityScale = 0;
+        GameIsRunning=false;
     }
     public void ResumeGame()
     {
         Time.timeScale = 1;
         Player.GetComponent<Rigidbody2D>().gravityScale = 1;
+        GameIsRunning = true;
     }
  
     //---------------------------------------------------UI ZONE

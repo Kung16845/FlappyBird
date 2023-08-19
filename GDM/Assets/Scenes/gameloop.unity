@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41f5884a9115e7418072affb51efb04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameLoop: {fileID: 825303508}
   myRigidbody2D: {fileID: 175193494}
   animator: {fileID: 175193491}
   jumpForce: 200
@@ -800,8 +801,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475410869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.51, y: -4, z: 0}
-  m_LocalScale: {x: 12.189971, y: 2.0294425, z: 1}
+  m_LocalPosition: {x: -0.0605, y: -4, z: 0}
+  m_LocalScale: {x: 17.665842, y: 2.0294425, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1042,6 +1043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 175193489}
+  GameIsRunning: 0
   startButton: {fileID: 907954552}
   endMenu: {fileID: 647881408}
   hp_text: {fileID: 1374736757}
@@ -1873,8 +1875,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576256190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.51, y: 5.89, z: 0}
-  m_LocalScale: {x: 12.189971, y: 1.8257294, z: 1}
+  m_LocalPosition: {x: 0.0007, y: 5.89, z: 0}
+  m_LocalScale: {x: 17.460266, y: 1.8257294, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
